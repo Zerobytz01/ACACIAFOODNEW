@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Earth Tones */
+    /* Primary: Deep Forest Green */
+    --primary: 140 40% 25%;
+    --primary-foreground: 40 20% 95%;
+
+    /* Secondary: Earthy Brown/Terracotta */
+    --secondary: 30 40% 45%;
+    --secondary-foreground: 40 20% 95%;
+
+    /* Background: Cream/Off-white */
+    --background: 40 20% 96%;
+    --foreground: 140 40% 10%;
+
+    /* Cards: Slightly warmer white */
+    --card: 40 30% 94%;
+    --card-foreground: 140 40% 15%;
+
+    /* Popovers */
+    --popover: 40 30% 94%;
+    --popover-foreground: 140 40% 15%;
+
+    /* Muted: Sand */
+    --muted: 40 20% 85%;
+    --muted-foreground: 140 20% 35%;
+
+    /* Accent: Fresh Green */
+    --accent: 140 30% 45%;
+    --accent-foreground: 40 20% 95%;
+
+    /* Destructive */
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 40 20% 95%;
+
+    /* Border/Input */
+    --border: 140 20% 85%;
+    --input: 140 20% 85%;
+    --ring: 140 40% 25%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Forest Tones */
+    --background: 140 50% 5%;
+    --foreground: 40 20% 90%;
+
+    --card: 140 40% 8%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 140 40% 8%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 140 40% 40%;
+    --primary-foreground: 40 20% 95%;
+
+    --secondary: 30 40% 35%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 140 30% 15%;
+    --muted-foreground: 140 20% 65%;
+
+    --accent: 140 30% 25%;
+    --accent-foreground: 40 20% 90%;
+
+    --destructive: 0 60% 30%;
+    --destructive-foreground: 40 20% 90%;
+
+    --border: 140 30% 15%;
+    --input: 140 30% 15%;
+    --ring: 140 40% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.leaf-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 100, 0, 0.05) 1px, transparent 0);
+  background-size: 20px 20px;
+}
