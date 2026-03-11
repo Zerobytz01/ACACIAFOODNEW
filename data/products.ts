@@ -4,9 +4,18 @@ export interface Product {
     description: string
     image: string
     category: string
+    badge?: string
 }
 
 export const products: Product[] = [
+    {
+        id: 25,
+        name: "GoFresh Mineral Water",
+        description: "Experience the refreshing purity of GoFresh Mineral Water - sourced, filtered, and bottled to deliver clean hydration every day. Whether you are at work, on the move, or relaxing outdoors, GoFresh keeps you refreshed and energized.",
+        image: "/New_GoFresh Water_700x700.png",
+        category: "GoFresh Water",
+        badge: "500ml + 100ml FREE",
+    },
     // Yes Soda
     {
         id: 1,

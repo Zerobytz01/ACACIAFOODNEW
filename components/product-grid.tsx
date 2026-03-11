@@ -8,6 +8,7 @@ import { products, type Product } from "@/data/products"
 // Category label colors
 const categoryColors: Record<string, { bg: string; text: string }> = {
   "Yes Water": { bg: "bg-blue-500", text: "text-white" },
+  "GoFresh Water": { bg: "bg-sky-500", text: "text-white" },
   "GoFresh Concentrated": { bg: "bg-green-500", text: "text-white" },
   "Yes Flavoured Drinks": { bg: "bg-purple-500", text: "text-white" },
   "Fruta Drinks": { bg: "bg-orange-500", text: "text-white" },
@@ -97,6 +98,24 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
             {product.category}
           </motion.div>
         </motion.div>
+
+        {product.badge ? (
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.1 + 0.35,
+              type: "spring",
+              stiffness: 100
+            }}
+            className="absolute top-4 right-4 z-10"
+          >
+            <div className="rounded-lg bg-primary px-3 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-primary-foreground shadow-lg sm:text-xs">
+              {product.badge}
+            </div>
+          </motion.div>
+        ) : null}
       </div>
 
       {/* Content Section - LaCroix Style */}

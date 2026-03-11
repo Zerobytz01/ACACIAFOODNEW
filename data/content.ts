@@ -8,10 +8,10 @@ export const heroContent = [
     },
     {
         id: 2,
-        image: "/YESS_Water_1700x900.png?height=1080&width=1920",
-        title: "Pure Mountain",
-        highlight: "Spring Water",
-        description: "Sourced from pristine mountain springs, our water delivers unmatched purity and taste.",
+        image: "/New_GoFreshWater_1700x900.png",
+        title: "GoFresh",
+        highlight: "Mineral Water",
+        description: "Clean, refreshing hydration designed for everyday moments at work, on the move, or outdoors.",
     },
     {
         id: 3,
